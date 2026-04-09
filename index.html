@@ -8,9 +8,6 @@
 
 <title>Black Pearl Technology | IT Solutions</title>
 
-<meta name="description"
-content="Black Pearl Technology provides cybersecurity, networking, CCTV and IT support services.">
-
 <link rel="icon" type="image/png" href="favicon.png">
 
 <link rel="stylesheet"
@@ -94,7 +91,6 @@ gap:16px;
 width:85px;
 height:85px;
 border-radius:50%;
-box-shadow:0 0 25px #ff4fd8;
 }
 
 /* Hero */
@@ -121,52 +117,54 @@ border-radius:30px;
 cursor:pointer;
 }
 
+/* Sections */
+
+section{
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:var(--card);
+padding:30px;
+border-radius:18px;
+text-align:center;
+}
+
 /* Assistant */
 
 #assistantBtn{
-
 position:fixed;
 bottom:20px;
 right:20px;
-
 background:#ff4fd8;
 color:#fff;
-
 padding:14px 20px;
-
 border-radius:30px;
-
 cursor:pointer;
-
 box-shadow:0 0 20px #ff4fd8;
-
 z-index:999;
-
 font-weight:bold;
-
 }
 
 #assistantBox{
-
 display:none;
-
 position:fixed;
-
 bottom:80px;
 right:20px;
-
 width:270px;
-
 background:#000;
-
 padding:15px;
-
 border-radius:15px;
-
 box-shadow:0 0 25px #38bdf8;
-
 z-index:999;
-
 }
 
 #assistantBox h3{
@@ -177,37 +175,25 @@ margin-bottom:10px;
 #assistantBox input,
 #assistantBox select,
 #assistantBox textarea{
-
 width:100%;
 margin-bottom:10px;
-
 padding:8px;
-
 border-radius:8px;
-
 border:none;
-
 }
 
 #assistantBox button{
-
 width:100%;
-
 padding:10px;
-
 background:#38bdf8;
-
 border:none;
-
 border-radius:10px;
-
 cursor:pointer;
-
 font-weight:bold;
-
 }
 
 </style>
+
 </head>
 
 <body>
@@ -250,15 +236,70 @@ Complete IT solutions including hardware, software, cybersecurity and server man
 Call Now
 </a>
 
-<a href="https://wa.me/919003601627" class="btn glow" target="_blank">
+<a href="https://wa.me/919003601627"
+class="btn glow"
+target="_blank">
 WhatsApp
 </a>
 
-<a href="mailto:blackpearltechnologycbe@gmail.com" class="btn glow">
+<a href="mailto:blackpearltechnologycbe@gmail.com"
+class="btn glow">
 Email
 </a>
 
 </div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="neon" style="text-align:center;">
+Our Services
+</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Hardware & Software</h3>
+<p>Installation, repair and maintenance.</p>
+</div>
+
+<div class="card">
+<h3>Cybersecurity</h3>
+<p>Complete protection solutions.</p>
+</div>
+
+<div class="card">
+<h3>Server Management</h3>
+<p>Setup and monitoring services.</p>
+</div>
+
+<div class="card">
+<h3>AMC Support</h3>
+<p>Annual maintenance support.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="map">
+
+<h2 class="neon" style="text-align:center;">
+Our Location
+</h2>
+
+<div style="max-width:900px;margin:auto;border-radius:20px;overflow:hidden;">
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18..."
+width="100%"
+height="400"
+style="border:0"
+loading="lazy">
+</iframe>
 
 </div>
 
@@ -292,13 +333,9 @@ placeholder="Phone Number">
 <option>Select Service</option>
 
 <option>Cybersecurity</option>
-
 <option>Networking</option>
-
 <option>Server Support</option>
-
 <option>AMC Support</option>
-
 <option>Hardware Service</option>
 
 </select>
@@ -315,12 +352,8 @@ Send Inquiry
 
 <script>
 
-/* Theme */
-
 function toggleTheme(){
-
 document.body.classList.toggle("dark");
-
 }
 
 /* Open Assistant */
@@ -366,23 +399,15 @@ let text =
 "Service: "+service+"%0A"+
 "Message: "+message;
 
-/* WhatsApp */
-
 let whatsapp =
 "https://wa.me/919003601627?text="+text;
-
-/* Email */
 
 let email =
 "mailto:blackpearltechnologycbe@gmail.com"+
 "?subject=New Customer Inquiry"+
 "&body="+text;
 
-/* Open WhatsApp */
-
 window.open(whatsapp,'_blank');
-
-/* Open Email */
 
 window.location.href=email;
 
@@ -391,5 +416,4 @@ window.location.href=email;
 </script>
 
 </body>
-
 </html>
