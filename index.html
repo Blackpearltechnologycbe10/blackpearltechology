@@ -1,4 +1,3 @@
-ok check i add everything make check
 <!DOCTYPE html>
 <html lang="en">
 
@@ -267,229 +266,25 @@ document.querySelector(".theme-btn").textContent="☀️ Light";
 }
 }
 </script>
-<style>
-#assistantBtn{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#ff4fd8;
-color:#fff;
-padding:14px 20px;
-border-radius:30px;
-cursor:pointer;
-box-shadow:0 0 20px #ff4fd8;
-z-index:999;
-font-weight:bold;
-}
-<!-- Assistant Chat Button -->
+<!-- Assistant Button -->
 <div id="assistantBtn" onclick="openAssistant()">
-👩‍💼 Assistant
-</div>
-
-<!-- Assistant Form -->
-<div id="assistantBox">
-
-<h3>Quick Support</h3>
-
-<input type="text"
-id="custName"
-placeholder="Your Name">
-
-<input type="tel"
-id="custPhone"
-placeholder="Phone Number">
-
-<select id="custService">
-
-<option>Select Service</option>
-
-<option>Cybersecurity</option>
-
-<option>Networking</option>
-
-<option>Server Support</option>
-
-<option>AMC Support</option>
-
-<option>Hardware Service</option>
-
-</select>
-
-<textarea
-id="custMessage"
-placeholder="Describe your issue"></textarea>
-
-<button onclick="sendDetails()">
-Send Inquiry
-</button>
-
+👩‍💼 Chat
 </div>
 
 <style>
-
-/* Assistant Button */
-
 #assistantBtn{
-
 position:fixed;
 bottom:20px;
 right:20px;
-
 background:#ff4fd8;
 color:#fff;
-
 padding:14px 20px;
-
 border-radius:30px;
-
 cursor:pointer;
-
 box-shadow:0 0 20px #ff4fd8;
-
 z-index:999;
-
 font-weight:bold;
-
 }
-
-/* Assistant Form */
-
-#assistantBox{
-
-display:none;
-
-position:fixed;
-
-bottom:80px;
-right:20px;
-
-width:270px;
-
-background:#000;
-
-padding:15px;
-
-border-radius:15px;
-
-box-shadow:0 0 25px #38bdf8;
-
-z-index:999;
-
-}
-
-#assistantBox h3{
-
-color:#fff;
-margin-bottom:10px;
-
-}
-
-#assistantBox input,
-#assistantBox select,
-#assistantBox textarea{
-
-width:100%;
-
-margin-bottom:10px;
-
-padding:8px;
-
-border-radius:8px;
-
-border:none;
-
-}
-
-#assistantBox button{
-
-width:100%;
-
-padding:10px;
-
-background:#38bdf8;
-
-border:none;
-
-border-radius:10px;
-
-cursor:pointer;
-
-font-weight:bold;
-
-}
-
-</style>
-
-<script>
-
-/* Open Assistant */
-
-function openAssistant(){
-
-let box =
-document.getElementById("assistantBox");
-
-if(box.style.display==="none"
-|| box.style.display===""){
-
-box.style.display="block";
-
-}else{
-
-box.style.display="none";
-
-}
-
-}
-
-/* Send Details */
-
-function sendDetails(){
-
-let name =
-document.getElementById("custName").value;
-
-let phone =
-document.getElementById("custPhone").value;
-
-let service =
-document.getElementById("custService").value;
-
-let message =
-document.getElementById("custMessage").value;
-
-/* Message Format */
-
-let text =
-"New Customer Inquiry%0A"+
-"Name: "+name+"%0A"+
-"Phone: "+phone+"%0A"+
-"Service: "+service+"%0A"+
-"Message: "+message;
-
-/* WhatsApp */
-
-let whatsapp =
-"https://wa.me/919003601627?text="+text;
-
-/* Email */
-
-let email =
-"mailto:blackpearltechnologycbe@gmail.com"+
-"?subject=New Customer Inquiry"+
-"&body="+text;
-
-/* Open WhatsApp */
-
-window.open(whatsapp,'_blank');
-
-/* Open Email */
-
-window.location.href=email;
-
-}
-
-</script>
 </style>
 </body>
 </html>
